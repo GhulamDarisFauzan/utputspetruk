@@ -1,0 +1,317 @@
+/*#include <iostream>
+using namespace std;
+
+int main() {
+    int a = 5;
+    int *ptr;
+
+    ptr = &a;
+
+    cout << "Value of a: " << a << endl;
+    cout << "Address of a: " << &a << endl;
+    cout << "Value of ptr: " << ptr << endl;
+    cout << "Value pointed by ptr: " << *ptr << endl;
+
+    return 0;
+}
+
+
+
+
+
+#include <iostream>
+
+using namespace std;
+
+//oop
+class Mahasiswa
+{
+	public:
+		string nama;
+		string NPM;
+		string Jurusan;
+		double IPK;
+};
+
+int main()
+{
+	
+	Mahasiswa data1;
+	data1.nama="Ghulam";
+	data1.NPM="2217051044";
+	data1.Jurusan="Ilmu Komputer";
+	data1.IPK=3.6;
+	
+	Mahasiswa data2;
+	data2.nama="Rafif";
+	data2.NPM="2217051023";
+	data2.Jurusan="Ilmu Komputer";
+	data2.IPK=3.6;
+	
+	cout<<data1.nama<<endl;
+	cout<<data1.NPM<<endl;
+	cout<<data1.Jurusan<<endl;
+	cout<<data1.IPK<<endl;
+	
+	cout<<endl;
+	
+	cout<<data2.nama<<endl;
+	cout<<data2.NPM<<endl;
+	cout<<data2.Jurusan<<endl;
+	cout<<data2.IPK<<endl;
+	
+	
+	
+	
+	
+	return 0;
+}
+
+
+//construction
+#include <iostream>
+
+using namespace std;
+
+
+
+class Mahasiswa
+{
+	public:
+		string nama;
+		string NPM;
+		string Jurusan;
+		double IPK;
+		
+		
+		
+		Mahasiswa (string inama,string iNPM,string iJurusan, double iIPK)
+		{
+			Mahasiswa::nama =inama;
+			Mahasiswa::NPM =iNPM;
+			Mahasiswa::Jurusan=iJurusan;
+			Mahasiswa::IPK=iIPK;
+		}
+};
+
+
+
+int main()
+{
+	
+	Mahasiswa data1= Mahasiswa("Ghulam","2217051044","Ilmu Komputer",3.6);
+	
+	
+	cout<<data1.nama <<endl;
+	cout<<data1.NPM  <<endl;
+	cout<<data1.Jurusan<<endl;
+	cout<<data1.IPK  <<endl;
+	
+	
+	
+	
+	
+	return 0;
+}
+
+
+
+//io stream
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
+int main()
+{
+	
+	ofstream outfile("example.txt");
+	
+	outfile << "Nama saya Ghulam ";
+	
+	outfile.close();
+	
+	
+	return 0;
+}
+
+//io stream read
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
+int main()
+{
+
+string teks;
+
+ifstream readfile("example.txt");
+
+while(getline(readfile, teks))
+{
+	cout<<teks;
+}
+
+readfile.close();
+}
+
+//io s kasus
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
+int main()
+{
+	string teks[4];
+	
+	for(int i=0; i<4; i++)
+	{
+		
+		cin>>teks[1];
+	}
+	
+	ofstream haloo("bebarang.txt");
+	
+	for(int i=0; i<4; i++)
+{
+	haloo<<teks[i]<<endl;
+}
+	
+	return 0;
+}
+
+//funtion
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+double luasLingkaran(double r)
+{
+	
+	double pi =M_PI;
+	return pi*r*r;
+}
+
+int main()
+{
+	double r;
+	cin>>r;
+	
+	cout<<"luas lingkarannya adl :"<<luasLingkaran(r);
+	
+	
+	
+	return 0;
+}
+
+//prosedur
+#include <iostream>
+
+using namespace std;
+
+void absen(string name, string npm)
+{
+	cout<<name<<"-"<<npm;
+}
+
+int main()
+{ 
+
+string nama;
+string npm;
+
+getline(cin, nama);
+getline(cin,npm);
+
+absen(nama,npm);
+	
+	
+	
+	return 0;
+}
+
+//array 1 dimensi
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   char nama[20];
+   
+   cout<<"minta nama :";
+   cin>>nama;
+   
+   cout<<"hallo"<<nama<<endl;
+
+
+	
+	return 0;
+}
+
+//arra
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int arrayane[5]={10,20,30,40,50};
+	
+	for(int i=0; i<4; i++)
+	{
+		cout<<"value of elemnts "<<i<<" is :"<<arrayane[i]<<endl;
+	}
+	
+	
+	return 0;
+}
+
+//pointer
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a = 5;
+    int *ptr;
+
+    ptr = &a;
+
+    cout << "Value of a: " << a << endl;
+    cout << "Address of a: " << &a << endl;
+    cout << "Value of ptr: " << ptr << endl;
+    cout << "Value pointed by ptr: " << *ptr << endl;
+
+    return 0;
+    
+}
+
+
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+int main() {
+    char str1[] = "Hello";
+    char str2[] = "World";
+    char str3[20];
+
+    // Copy str1 to str3
+    strcpy(str3, str1);
+    cout << "str3 after copying str1: " << str3 << endl;
+
+    // Concatenate str2 to str3
+    strcat(str3, str2);
+    cout << "str3 after concatenating str2: " << str3 << endl;
+
+    // Get length of str3
+    int len = strlen(str3);
+    cout << "Length of str3: " << len << endl;
+
+    return 0;
+}
+
+*/
